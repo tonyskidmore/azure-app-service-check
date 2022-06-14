@@ -12,7 +12,7 @@ COPY train.csv ./train.csv
 COPY test.json ./test.json
 
 COPY train.py ./train.py
-COPY api.py ./api.py
+COPY app.py ./app.py
 
 RUN python3 train.py
 
