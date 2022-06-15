@@ -8,8 +8,11 @@ Azure App Service Environment testing.
 
 docker build -t azure-app-service-check -f Dockerfile .
 
-docker run -d -it --name azure-app-service-check -p 80:5000 azure-app-service-check
+docker run -d -it --rm --name azure-app-service-check -p 80:5000 azure-app-service-check
 
+docker run -d --rm --name azure-app-service-check -p 5000:5000 azure-app-service-check
+
+# docker run -i --log-driver=none -a stdin -a stdout -a stderr
 
 ````
 
